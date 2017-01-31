@@ -1,5 +1,6 @@
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://fast-headland-35578.herokuapp.com/';
+//  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://fast-headland-35578.herokuapp.com/';
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
 }
 
 function getQueryStringParameterByName(name, url) {
