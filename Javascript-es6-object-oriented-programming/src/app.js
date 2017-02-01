@@ -1,5 +1,14 @@
-class Drone {
+class Vehicle {
+
+}
+
+class Car extends Vehicle {
+
+}
+
+class Drone extends Vehicle {
   constructor(id) {
+    super();
     console.log('in Drone constructor');
     this._id = id;                    // _ means private
   }
