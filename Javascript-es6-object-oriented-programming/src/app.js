@@ -1,10 +1,17 @@
 class Vehicle {
-
+  constructor(licenseNum) {
+    this.licenseNum = licenseNum;
+  }
 }
 
 class Car extends Vehicle {
-
+  constructor(licenseNum) {
+    super(licenseNum);
+  }
 }
+
+let car = new Car('C987');
+console.log('car licenseNum ' + car.licenseNum);
 
 class Drone extends Vehicle {
   constructor(id) {
