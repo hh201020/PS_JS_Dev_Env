@@ -1,17 +1,39 @@
 class Vehicle {
   constructor(licenseNum) {
+    this.gpsEnabled = true;
     this.licenseNum = licenseNum;
+  }
+
+  static getCompanyName() {
+    console.log('My Company');
+  }
+
+  start() {
+    console.log('start vehicle');
   }
 }
 
 class Car extends Vehicle {
   constructor(licenseNum) {
     super(licenseNum);
+    this.gpsEnabled = false;
+  }
+
+  static getCompanyName() {
+    console.log('My Other Company');
+  }
+
+  start() {
+    console.log('start car');
+    super.start();
   }
 }
 
 let car = new Car('C987');
 console.log('car licenseNum ' + car.licenseNum);
+console.log('car licenseNum ' + car.gpsEnabled);
+car.start();
+Car.getCompanyName();                 // it is different from Java, where static method cannot be overrided
 
 class Drone extends Vehicle {
   constructor(id) {
