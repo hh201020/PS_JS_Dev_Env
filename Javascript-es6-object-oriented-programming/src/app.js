@@ -39,3 +39,5 @@ console.log('drone max Height: ' + drone.maxHeight);  // it is undefined, it onl
 drone.fly();
 Drone.getCompany();                     // static method can only run on class Drone
 drone.getCompany();
+
+// For source control, this course should be moved to a new branch
