@@ -10,3 +10,9 @@ for (let e of dataService.errors) {
     console.log(e.message);
     console.log(e.data);
 }
+
+let car = dataService.getCarByLicense('AT9900');
+
+let cars = dataService.getCarsSortedByLicense();
+for (let car of cars)
+    console.log(car.license);
