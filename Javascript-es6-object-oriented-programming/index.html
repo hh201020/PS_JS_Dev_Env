@@ -10,12 +10,15 @@
   <script src="node_modules/systemjs/dist/system.js"></script>
   <script src="src/system.config.js"></script>
   <script src="node_modules/material-design-lite/dist/material.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1rHGzE-oc39al3a2JHGpr10zreNn0mWE&callback=googleMapsCallback"></script>
 </head>
 
 <body>
   <h1>ES6 OOP Javascript</h1>
   <script>
-    SystemJS.import('src/app.js');
+    function googleMapsCallback() {
+      SystemJS.import('src/app.js');
+    }
   </script>
 </body>
 

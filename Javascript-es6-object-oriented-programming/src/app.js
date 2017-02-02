@@ -7,10 +7,12 @@ import {Button} from './ui/button.js';
 import {Image} from './ui/image.js';
 import {TitleBar} from './ui/title-bar.js';
 import {DataTable} from './ui/data-table.js';
+import {GoogleMap} from './ui/google-map.js';
 
-let headers = "License Make Model Miles".split(' ');
 let dataService = new FleetDataService();
 dataService.loadData(fleet);
-let dt = new DataTable(headers, dataService.cars);
 
-dt.appendToElement($('body'));
+let centerOfMap = {lat: 40.783661, lng: -73.965883};
+let map = new GoogleMap(centerOfMap, dataService.cars);
+
+map.appendToElement($('body'));
