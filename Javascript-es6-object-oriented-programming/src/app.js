@@ -4,6 +4,7 @@ import {FleetDataService} from './services/fleet-data-service.js';
 import {ApplicationBase} from './framework/application-base.js';
 import {HomePage} from './home-page.js';
 import {CarsPage} from './cars-page.js';
+import {MapPage} from './map-page.js';
 
 export class App extends ApplicationBase {
 
@@ -15,7 +16,7 @@ export class App extends ApplicationBase {
         this.addRoute('Home', new HomePage(), true);
         this.addRoute('Cars', new CarsPage());
         this.addRoute('Drones', null);          // it is empty now, so the button Drone will throw error
-        this.addRoute('Map', null);
+        this.addRoute('Map', new MapPage());
     }
 }
 
