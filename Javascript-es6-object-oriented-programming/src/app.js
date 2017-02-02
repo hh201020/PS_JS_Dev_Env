@@ -16,3 +16,8 @@ let car = dataService.getCarByLicense('AT9900');
 let cars = dataService.getCarsSortedByLicense();
 for (let car of cars)
     console.log(car.license);
+
+cars = dataService.filterCarsByMake('e');
+
+for (let car of cars)
+    console.log(car.make);
