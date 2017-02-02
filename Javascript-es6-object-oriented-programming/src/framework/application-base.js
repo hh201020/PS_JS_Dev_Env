@@ -29,6 +29,11 @@ export class ApplicationBase {
     show(element) {
         this.titleBar.appendToElement(element);
 
+        this.titleBar.element.find('.mdl-navigation__link').click((event) => {    // in ES6 using => makes sure 'this' is the class not the button
+            let route = event.target.innerHTML;                                   // if using function, it will be the button
+            this.activateRoute(route.trim());
+        });
+
         if (this.defaultRoute) {
             this.activateRoute(this.defaultRoute);
         }
