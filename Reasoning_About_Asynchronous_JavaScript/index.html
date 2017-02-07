@@ -20,14 +20,20 @@
       SystemJS.import('src/app.js');
     }
   </script>
-
-  <label for="city">City:</label>
-  <input id="city" />
-  <button onclick="load()">Load</button>
-  <div id="results">
+  <div>
+    <button id="button">Click me to change the page</button>
+    <script src="src/blocking-button.js"></script>
   </div>
 
-  <script src="src/index.js"></script>
+  <div>
+    <label for="city">City:</label>
+    <input id="city" />
+    <button onclick="load()">Load</button>
+    <div id="results">
+    </div>
+
+    <script src="src/index.js"></script>
+  </div>
 </body>
 
 </html>
