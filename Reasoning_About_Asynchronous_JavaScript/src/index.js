@@ -19,7 +19,7 @@ function load() {
   var weatherRequest = new XMLHttpRequest();
   weatherRequest.onload = weatherSuccess;
   weatherRequest.onerror = failure;
-  weatherRequest.open('get', weatherUrl, true);
+  weatherRequest.open('get', weatherUrl, false);
   weatherRequest.send();
 
   console.log("2")
@@ -27,7 +27,7 @@ function load() {
   let fiveDayRequest = new XMLHttpRequest();
   fiveDayRequest.onload = fiveDaySuccess;
   fiveDayRequest.onerror = failure;
-  fiveDayRequest.open('get', fiveDayUrl, true);
+  fiveDayRequest.open('get', fiveDayUrl, false);
   fiveDayRequest.send();
   console.log("3")
 
