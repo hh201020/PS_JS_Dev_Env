@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Drones</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/node_modules/material-design-lite/dist/material.css">
+
+  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script src="src/system.config.js"></script>
+  <script src="node_modules/material-design-lite/dist/material.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1rHGzE-oc39al3a2JHGpr10zreNn0mWE&callback=googleMapsCallback"></script>
+</head>
+
+<body>
+  <h1>ES6 OOP Javascript</h1>
+  <script>
+    function googleMapsCallback() {
+      SystemJS.import('src/app.js');
+    }
+  </script>
+
+  <label for="city">City:</label>
+  <input id="city" />
+  <button onclick="load()">Load</button>
+  <div id="results">
+  </div>
+
+  <script src="src/index.js"></script>
+</body>
+
+</html>
