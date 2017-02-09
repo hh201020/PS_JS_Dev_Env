@@ -1,0 +1,19 @@
+{
+  "name": "extending-bootstrap-with-css.javascript.jquery",
+  "version": "1.0.0",
+  "description": "In this Sample\r -----------------------------\r Created a new Empty Web Project\r Added Bootstrap and jQuery\r Added Default.html\r Added a left navigation system\r Added \\Content\\pdsa-sidebar.css which contains all of the CSS for the left navigation system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
