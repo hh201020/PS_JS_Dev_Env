@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Music Site")]
-[assembly: AssemblyDescription("Music Site")]
+[assembly: AssemblyTitle("MusicSite")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("PDSA, Inc.")]
-[assembly: AssemblyProduct("Music Site")]
-[assembly: AssemblyCopyright("Copyright © 2015 by PDSA, Inc.")]
+[assembly: AssemblyCompany("Toshiba")]
+[assembly: AssemblyProduct("MusicSite")]
+[assembly: AssemblyCopyright("Copyright © Toshiba 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
