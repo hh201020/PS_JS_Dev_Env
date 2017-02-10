@@ -5,15 +5,24 @@
 <head runat="server">
   <title>Index</title>
   <style type="text/css">
-        .BlueDiv { background-color: Navy; color:White;width:200px;}
-        .RedDiv { background-color: Red; color:White; width:200px;}
-        .style1
-        {
-            width: 100%;
-        }
-    </style>
-    <script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="index.js" type="text/javascript"></script>
+    .BlueDiv {
+      background-color: Navy;
+      color: White;
+      width: 200px;
+    }
+
+    .RedDiv {
+      background-color: Red;
+      color: White;
+      width: 200px;
+    }
+
+    .style1 {
+      width: 100%;
+    }
+  </style>
+  <script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -34,57 +43,57 @@
       <tr>
         <td>
           <table style="width:100%">
-<tr>
-  <td>Nested Table Cell and Row</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<br />
-</div>
-<div class="BlueDiv">
-  <span>Blue div</span>
-</div>
-<br />
-<span class="BlueDiv">This is my blue span</span>
-<br />
-<div class="RedDiv">
-  <span>Red div</span>
-</div>
-<p>
-  <img src="Images/pluralsight.png" />
-</p>
+            <tr>
+              <td>Nested Table Cell and Row</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <br />
+  </div>
+  <div class="BlueDiv">
+    <span>Blue div</span>
+  </div>
+  <br />
+  <span class="BlueDiv">This is my blue span</span>
+  <br />
+  <div class="RedDiv">
+    <span>Red div</span>
+  </div>
+  <p>
+    <img src="Images/pluralsight.png" />
+  </p>
 
-<form id="form1" runat="server">
-  <table style="width:300px;">
-<tr>
-  <td style="width:30%;">First Name</td>
-<td style="width:70%;"><input id="FirstNameTextBox" value="John" type="text" /></td>
-</tr>
-<tr>
-  <td>Last Name</td>
-  <td><input id="LastNameTextBox" type="text" /></td>
-</tr>
-<tr>
-  <td>Comments</td>
-  <td><textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea></td>
-</tr>
-<tr>
-  <td>
-    <select id="sel">
-                    <option value="AZ">AZ</option>
-                    <option value="CA" selected="true">CA</option>
-                </select></td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td><input id="SubmitButton" type="button" value="Submit" /></td>
-  <td>&nbsp;</td>
-</tr>
-</table>
+  <form id="form1" runat="server">
+    <table style="width:300px;">
+      <tr>
+        <td style="width:30%;">First Name</td>
+        <td style="width:70%;"><input id="FirstNameTextBox" value="John" type="text" /></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><input id="LastNameTextBox" type="text" /></td>
+      </tr>
+      <tr>
+        <td>Comments</td>
+        <td><textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea></td>
+      </tr>
+      <tr>
+        <td>
+          <select id="sel">
+            <option value="AZ">AZ</option>
+            <option value="CA" selected="true">CA</option>
+          </select></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><input id="SubmitButton" type="button" value="Submit" /></td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
 
-</form>
+  </form>
 </body>
 
 </html>
