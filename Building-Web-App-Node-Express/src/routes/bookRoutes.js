@@ -71,7 +71,8 @@ var router = function(nav){
             book: books[id]
         });
     });
-    
+
     return bookRouter;
-}
+};
+
 module.exports = router;
