@@ -58,7 +58,7 @@ var router = function (nav) {
     adminRouter.route('/addBooks')
         .get(function (req, res) {
             var url =
-                'mongodb://localhost:27017/libraryApp';
+                'mongodb://localhost:27017/libraryApp';       // create database called libraryApp, in where collection books will exist.
 
             mongodb.connect(url, function (err, db) {
                 var collection = db.collection('books');
