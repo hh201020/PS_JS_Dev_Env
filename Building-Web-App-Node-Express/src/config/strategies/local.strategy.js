@@ -1,18 +1,31 @@
 var passport = require('passport'),
-    LocalStrategy = require('passport-local').Strategy;
+  LocalStrategy = require('passport-local').Strategy,
+  mongodb = require('mongodb').MongoClient;
 
 module.exports = function () {
-    passport.use(new LocalStrategy({
-            usernameField: 'userName',
-            passwordField: 'password'
+  passport.use(new LocalStrategy({
+    usernameField: 'userName',
+    passwordField: 'password'
+  },
+    function (username, password, done) {
+      var url = 'mongodb://localhost:27017/libraryApp';
+
+      mongodb.connect(url, function (err, db) {
+        var collection = db.collection('users');
+        collection.findOne({
+          username: username
         },
-        function (username, password, done) {
-          var user = {
-            username: username,
-            password: password
-          };
-          done(null, user);
-        }));
+          function (err, results) {
+            if (results.password === password) {
+              var user = results;
+              done(null, user);
+            } else {
+              done(null, false, { message: 'Bad password' });
+            }
+          }
+        );
+      });
+    }));
 };
 // local strategy does not do anything yet
 // for now every user is good user, and will be authenticated
