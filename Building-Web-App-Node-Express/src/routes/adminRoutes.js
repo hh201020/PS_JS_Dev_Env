@@ -55,6 +55,12 @@ var books = [
 
 var router = function (nav) {
 
+    adminRouter.use(function (req, res, next) {
+        if (!req.user) {
+            res.redirect('/');
+        }
+        next();
+    });
     adminRouter.route('/addBooks')
         .get(function (req, res) {
             var url =
