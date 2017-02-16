@@ -14,3 +14,4 @@ module.exports = function () {
           done(null, user);
         }));
 };
+// local strategy does not do anything yet
