@@ -28,14 +28,20 @@ var router = function () {
       });
     });
 
-   authRouter.route('/signIn')
-        .post(passport.authenticate('local', {
-            failureRedirect: '/'             // if failed, go to home
-        }), function (req, res) {
-            res.redirect('/auth/profile');   // if success, to to profile
-        });
+  authRouter.route('/signIn')
+    .post(passport.authenticate('local', {
+      failureRedirect: '/'             // if failed, go to home
+    }), function (req, res) {
+      res.redirect('/auth/profile');   // if success, to to profile
+    });
 
   authRouter.route('/profile')
+    .all(function (req, res, next) {
+      if (!req.user) {
+        res.redirect('/');
+      }
+      next();
+    })
     .get(function (req, res) {
       res.json(req.user);                   // response just returns request body of user, which shows as json
     });
