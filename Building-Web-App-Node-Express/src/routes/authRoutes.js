@@ -1,6 +1,7 @@
 var express = require('express');
 var authRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
+var passport = require('passport');
 
 // when signing up, it calls req.login with req.body,
 // it just adds this user object to this session, and
@@ -26,6 +27,13 @@ var router = function () {
           });
       });
     });
+
+   authRouter.route('/signIn')
+        .post(passport.authenticate('local', {
+            failureRedirect: '/'             // if failed, go to home
+        }), function (req, res) {
+            res.redirect('/auth/profile');   // if success, to to profile
+        });
 
   authRouter.route('/profile')
     .get(function (req, res) {

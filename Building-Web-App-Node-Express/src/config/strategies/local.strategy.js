@@ -15,3 +15,4 @@ module.exports = function () {
         }));
 };
 // local strategy does not do anything yet
+// for now every user is good user, and will be authenticated
